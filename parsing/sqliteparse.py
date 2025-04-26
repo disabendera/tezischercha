@@ -26,6 +26,7 @@ grammar = """
 
 parser = Lark(grammar)
 
+
 # ---------- ПРЕОБРАЗОВАТЕЛЬ ----------
 class ToSQL(Transformer):
     def start(self, args):
@@ -59,6 +60,7 @@ class ToSQL(Transformer):
             return "="
         return op
 
+
 # ---------- СОЗДАНИЕ БАЗЫ ----------
 def create_db():
     conn = sqlite3.connect(":memory:")
@@ -81,6 +83,7 @@ def create_db():
     conn.commit()
     return conn
 
+
 # ---------- ПОИСК ----------
 def search_people(conn, query_text):
     tree = parser.parse(query_text)
@@ -97,6 +100,7 @@ def search_people(conn, query_text):
     cur = conn.cursor()
     cur.execute(sql)
     return cur.fetchall()
+
 
 # ---------- ПРИМЕР ИСПОЛЬЗОВАНИЯ ----------
 if __name__ == "__main__":

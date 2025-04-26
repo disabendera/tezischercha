@@ -1,0 +1,3 @@
+D:/highy/projects/other/tezischercha/clang/cmake-build-debug/CMakeFiles/clang.dir
+D:/highy/projects/other/tezischercha/clang/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/highy/projects/other/tezischercha/clang/cmake-build-debug/CMakeFiles/rebuild_cache.dir
